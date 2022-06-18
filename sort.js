@@ -5,12 +5,18 @@ function swap(i, j) {
 }
 
 function enableSortBtn(){
-    document.querySelector(".bubbleSort").disabled = true;
+    document.querySelector(".bubbleSort").disabled = false;
+    document.querySelector(".insertionSort").disabled = false;
+    document.querySelector(".selectionSort").disabled = false;
+    document.querySelector(".mergeSort").disabled = false;
     
 }
 
 function disableSortBtn(){
-    document.querySelector(".bubbleSort").disabled = false;
+    document.querySelector(".bubbleSort").disabled = true;
+    document.querySelector(".insertionSort").disabled = true;
+    document.querySelector(".selectionSort").disabled = true;
+    document.querySelector(".mergeSort").disabled = true;
 }
 
 function disableSizeSlider(){

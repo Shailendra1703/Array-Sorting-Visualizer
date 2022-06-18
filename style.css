@@ -3,10 +3,11 @@ body
     padding: 0 20px 30px 0;
     line-height:1.4;
     font-size:15px;
+    color:black;
 }
 .flex-container
 {
-    margin-top:20px;
+    margin-top:100px;
     display:flex;
     flex-wrap: nowrap;
     width:100%;
@@ -24,9 +25,11 @@ body
     display:grid;
     grid-template-columns:1fr 1fr 2fr;
 }
-#input
+.input
 {
     display:flex;
-    padding:10px;
-    justify-content:space-around;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin:10px;
 }

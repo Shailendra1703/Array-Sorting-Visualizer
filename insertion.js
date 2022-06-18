@@ -29,5 +29,11 @@ async function insertion()
 
 const ins = document.querySelector(".insertionSort");
 ins.addEventListener('click',async function(){
+    disableSortBtn();
+    disableSizeSlider();
+    disableNewArrayBtn();
     await insertion();
+    enableSortBtn();
+    enableNewArrayBtn();
+    enableSizeSlider();
 });

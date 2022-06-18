@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <header>
+  <!-- <header>
     <h1 align="center">Sorting Vislualizer</h1>
     <nav>
       <div class="row">
@@ -32,13 +32,48 @@
        </div>
       </div>
     </nav>
-  </header>
+  </header> -->
+
+
+<!--Header section-->
+
+<nav class="navbar bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#">Sorting Visualizer</a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sorting Options</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+              <button type="button" id="newArray" class="mg-lg-3 btn btn-outline-success btn-dark newArray">Array Generator</button>
+          </li>
+          <div class="p-lg-3 input">
+            <span id="size" class="m-lg-2" ><span class="p-lg-2">Size</span><input  id="arr_sz" type="range" min="5" max="100" step=1  value=60></span>
+            <span id="speed" class="m-lg-2" ><span class="p-lg-2">Speed</span><input  id="speed_input" type="range" min="20" max="500" stepDown=10  value=60></span>
+         </div>
+          <button type="button" class="m-lg-2 btn btn-outline-primary btn-dark bubbleSort">Bubble Sort</button>
+          <button type="button" class="m-lg-2 btn btn-outline-primary btn-dark selectionSort">Selection Sort</button>
+          <button type="button" class="m-lg-2 btn btn-outline-primary btn-dark insertionSort">Insertion Sort</button>
+          <button type="button" class="m-lg-2 btn btn-outline-primary btn-dark mergeSort">Merge Sort</button>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</nav>
+  
   <body class="p-2 mb-2 bg-dark text-white">
       <div id="bars" class="flex-container"></div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
       <script src="sort.js"></script>
       <script src="bubble.js"></script>
-      <script src = "selection.js"></script>
-      <script src = "insertion.js"></script>
+      <script src ="selection.js"></script>
+      <script src ="insertion.js"></script>
   </body>
 </html>
