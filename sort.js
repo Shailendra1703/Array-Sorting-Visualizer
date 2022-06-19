@@ -11,6 +11,7 @@ function enableSortBtn() {
   document.querySelector(".insertionSort").disabled = false;
   document.querySelector(".selectionSort").disabled = false;
   document.querySelector(".mergeSort").disabled = false;
+  document.querySelector(".quickSort").disabled = false;
 }
 
 function disableSortBtn() {
@@ -18,6 +19,7 @@ function disableSortBtn() {
   document.querySelector(".insertionSort").disabled = true;
   document.querySelector(".selectionSort").disabled = true;
   document.querySelector(".mergeSort").disabled = true;
+  document.querySelector(".quickSort").disabled = true;
 }
 
 function disableSizeSlider() {
@@ -40,6 +42,11 @@ function diablePerformanceBtn() {
 }
 function enablePerformanceBtn() {
   document.querySelector(".performance").disabled = false;
+}
+
+function clear(){
+  var text = document.getElementById("content");
+  text.textContent = "..."
 }
 
 function waitForMe(ms) {
@@ -102,5 +109,6 @@ newArray.addEventListener("click", function () {
   console.log("From newArray " + delay);
   enableSortBtn();
   enableSizeSlider();
+  clear();
   createNewArray(arraySize.value);
 });
