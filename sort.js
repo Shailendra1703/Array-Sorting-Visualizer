@@ -4,43 +4,50 @@ function swap(i, j) {
   j.style.height = temp;
 }
 
-function enableSortBtn(){
-    document.querySelector(".bubbleSort").disabled = false;
-    document.querySelector(".insertionSort").disabled = false;
-    document.querySelector(".selectionSort").disabled = false;
-    document.querySelector(".mergeSort").disabled = false;
-    
+
+
+function enableSortBtn() {
+  document.querySelector(".bubbleSort").disabled = false;
+  document.querySelector(".insertionSort").disabled = false;
+  document.querySelector(".selectionSort").disabled = false;
+  document.querySelector(".mergeSort").disabled = false;
 }
 
-function disableSortBtn(){
-    document.querySelector(".bubbleSort").disabled = true;
-    document.querySelector(".insertionSort").disabled = true;
-    document.querySelector(".selectionSort").disabled = true;
-    document.querySelector(".mergeSort").disabled = true;
+function disableSortBtn() {
+  document.querySelector(".bubbleSort").disabled = true;
+  document.querySelector(".insertionSort").disabled = true;
+  document.querySelector(".selectionSort").disabled = true;
+  document.querySelector(".mergeSort").disabled = true;
 }
 
-function disableSizeSlider(){
-    document.querySelector("#arr_sz").disabled = true;
+function disableSizeSlider() {
+  document.querySelector("#arr_sz").disabled = true;
 }
 
-function enableSizeSlider()
-{
-    document.querySelector("#arr_sz").disabled = false;
+function enableSizeSlider() {
+  document.querySelector("#arr_sz").disabled = false;
 }
 
-function disableNewArrayBtn()
-{
-    document.querySelector(".newArray").disabled = true;
+function disableNewArrayBtn() {
+  document.querySelector(".newArray").disabled = true;
 }
-function enableNewArrayBtn()
-{
-    document.querySelector(".newArray").disabled = false;
+function enableNewArrayBtn() {
+  document.querySelector(".newArray").disabled = false;
 }
 
-function waitForMe(ms){
-    return new Promise(resolve=>{
-        setTimeout(()=>{resolve('')},ms);
-    })
+function diablePerformanceBtn() {
+  document.querySelector(".performance").disabled = true;
+}
+function enablePerformanceBtn() {
+  document.querySelector(".performance").disabled = false;
+}
+
+function waitForMe(ms) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("");
+    }, ms);
+  });
 }
 
 let arraySize = document.querySelector("#arr_sz");
@@ -74,14 +81,13 @@ function createNewArray(Total_bars = 60) {
 
   const bars = document.querySelector("#bars");
 
-  for( let i = 0; i<Total_bars;i++)
-  {
-      const bar = document.createElement("div");
-      bar.style.height = `${array[i]*2}px`;
-      bar.classList.add('bar');
-      bar.classList.add('flex-item');
-      bar.classList.add('barNo${i}');
-      bars.appendChild(bar);
+  for (let i = 0; i < Total_bars; i++) {
+    const bar = document.createElement("div");
+    bar.style.height = `${array[i] * 2}px`;
+    bar.classList.add("bar");
+    bar.classList.add("flex-item");
+    bar.classList.add("barNo${i}");
+    bars.appendChild(bar);
   }
 }
 

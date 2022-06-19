@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array Simulator</title>
+    <link rel="icon" type="image/x-icon" href="./img/favi.jpg">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -33,8 +34,23 @@
       </div>
     </nav>
   </header> -->
-
-
+<!--modal section-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Performace of Your Sort</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="content">
+        <span>...</span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!--Header section-->
 
 <nav class="navbar bg-dark fixed-top">
@@ -57,10 +73,14 @@
             <span id="size" class="m-lg-2" ><span class="p-lg-2">Size</span><input  id="arr_sz" type="range" min="5" max="100" step=1  value=60></span>
             <span id="speed" class="m-lg-2" ><span class="p-lg-2">Speed</span><input  id="speed_input" type="range" min="20" max="500" stepDown=10  value=60></span>
          </div>
-          <button type="button" class="m-lg-2 btn btn-outline-primary btn-dark bubbleSort">Bubble Sort</button>
-          <button type="button" class="m-lg-2 btn btn-outline-primary btn-dark selectionSort">Selection Sort</button>
-          <button type="button" class="m-lg-2 btn btn-outline-primary btn-dark insertionSort">Insertion Sort</button>
-          <button type="button" class="m-lg-2 btn btn-outline-primary btn-dark mergeSort">Merge Sort</button>
+         <div class="d-grid gap-3">
+          <button type="button"  class="btn btn-outline-primary btn-dark bubbleSort" data-bs-dismiss="offcanvas">Bubble Sort</button>
+          <button type="button"  class="btn btn-outline-primary btn-dark selectionSort" data-bs-dismiss="offcanvas">Selection Sort</button>
+          <button type="button"  class="btn btn-outline-primary btn-dark insertionSort" data-bs-dismiss="offcanvas">Insertion Sort</button>
+          <button type="button"  class="btn btn-outline-primary btn-dark mergeSort" data-bs-dismiss="offcanvas">Merge Sort</button>
+          <button type="button"  class="btn btn-outline-primary btn-dark stop"  onclick="stop()">Stop</button>
+          <button type="button"  class="btn btn-outline-primary btn-dark performance"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-dismiss="offcanvas">Pefromance</button>
+          </div>
         </ul>
 
       </div>
@@ -73,7 +93,8 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
       <script src="sort.js"></script>
       <script src="bubble.js"></script>
-      <script src ="selection.js"></script>
-      <script src ="insertion.js"></script>
+      <script src="selection.js"></script>
+      <script src="insertion.js"></script>
+      <script src="merge.js"></script>
   </body>
 </html>
