@@ -34,7 +34,7 @@ ins.addEventListener("click", async function () {
   var text = document.getElementById("content");
   const p = document.querySelectorAll(".bar");
   var time = (endTime - startTime)/1000;
-  text.textContent = "Array Consist of "+ p.length+" elements and got sortend in "+time.toPrecision(2)+" seconds with a Speed Delay of " + delay+" miliseconds.";
+  text.textContent = "Array Consist of "+ p.length+" elements and got sorted in "+time.toPrecision(2)+" seconds with a Speed Delay of " + delay+" miliseconds.";
   enableSortBtn();
   enablePerformanceBtn();
   enableNewArrayBtn();
