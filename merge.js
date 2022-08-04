@@ -58,7 +58,9 @@ async function merging(e, l, mid, r) {
   while (j < n2) {
     if ((n1 + n2) === e.length) {
       e[k].style.background = "green";
-    } else {    }
+    } else { 
+      e[k].style.background = "lightgreen";
+    }
     e[k].style.height = right[j];
     j++;
     k++;
