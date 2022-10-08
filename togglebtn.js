@@ -10,9 +10,9 @@ let trans = () => {
 checkbox.addEventListener('change', function() {
     if(this.checked) {
         trans()
-        document.documentElement.setAttribute('data-theme', 'dark')
+        document.documentElement.setAttribute('data-theme', 'light')
     } else {
         trans()
-        document.documentElement.setAttribute('data-theme', 'light')
+        document.documentElement.setAttribute('data-theme', 'dark')
     }
 })

@@ -1,32 +1,31 @@
 html {
-  --bg: #fcfcfc;
-  --bg-panel: #ebebeb;
-  --color-headings: #333333;
-  --color-text: #333333;
-  --toggle-btn: #231f20;
-  --bars-color: #41CFFF;
-  --bars-sorted-color:green;
-  --bars-sorting-blue-color:rgb(3, 3, 255);
-  --bars-sorting-red-color:red;
-  --btn-primary-bg: rgb(238, 237, 237);
-  --btn-primary-bg-hover: #a39fa0;
-  --btn-close-bg:  rgb(232, 231, 231);
-
-}
-
-html[data-theme='dark'] {
   --bg: #333333;
   --bg-panel: #434343;
   --color-headings: #fcfcfc;
   --color-text: #fffbfb;
   --toggle-btn: #b5b5b5;
-  --bars-color: #4DFFDB;
-  --bars-sorted-color:rgb(0, 255, 0);
-  --bars-sorting-blue-color:rgb(62, 62, 255);
-  --bars-sorting-red-color:rgb(251, 78, 78);
+  --bars-color: #4dffdb;
+  --bars-sorted-color: rgb(0, 255, 0);
+  --bars-sorting-blue-color: rgb(62, 62, 255);
+  --bars-sorting-red-color: rgb(251, 78, 78);
   --btn-primary-bg: rgb(148, 146, 146);
   --btn-primary-bg-hover: #e4e3e3;
-  --btn-close-bg:rgb(238, 228, 228);
+  --btn-close-bg: rgb(238, 228, 228);
+}
+
+html[data-theme='light'] {
+  --bg: #fcfcfc;
+  --bg-panel: #ebebeb;
+  --color-headings: #333333;
+  --color-text: #333333;
+  --toggle-btn: #231f20;
+  --bars-color: #41cfff;
+  --bars-sorted-color: green;
+  --bars-sorting-blue-color: rgb(3, 3, 255);
+  --bars-sorting-red-color: red;
+  --btn-primary-bg: rgb(238, 237, 237);
+  --btn-primary-bg-hover: #a39fa0;
+  --btn-close-bg: rgb(232, 231, 231);
 }
 
 body {
@@ -43,7 +42,7 @@ div a {
   text-decoration: none;
 }
 div h2 {
-    font-weight: 700;
+  font-weight: 700;
 }
 .two-components {
   display: flex;
@@ -101,42 +100,40 @@ html.transition *:after {
 }
 
 /*  the bars */
-.flex-item{
-    background:var(--bars-color);
-    border:1pt solid black;
-    width:10px;
-    transition:0.1s all ease;
+.flex-item {
+  background: var(--bars-color);
+  border: 1pt solid black;
+  width: 10px;
+  transition: 0.1s all ease;
 }
 
 /* the menu modal  */
-.offcanvas{
-    background-color: var(--bg);
+.offcanvas {
+  background-color: var(--bg);
 }
-.offcanvas h5{
-    color: var(--color-headings);
+.offcanvas h5 {
+  color: var(--color-headings);
 }
-.offcanvas span{
-    color: var(--color-text);
+.offcanvas span {
+  color: var(--color-text);
 }
-.diff-sorts button{
-background-color: var(--btn-primary-bg);
-color: var(--color-text);
+.diff-sorts button {
+  background-color: var(--btn-primary-bg);
+  color: var(--color-text);
 }
-.diff-sorts button:hover{
-    background-color:   var(--btn-primary-bg);
-    box-shadow: 0px 0px 10px 3px var(--btn-primary-bg-hover);
-    border: none;
-    color: var(--color-text);
-
+.diff-sorts button:hover {
+  background-color: var(--btn-primary-bg);
+  box-shadow: 0px 0px 10px 3px var(--btn-primary-bg-hover);
+  border: none;
+  color: var(--color-text);
 }
-.btn-close{
-    background-color:var(--btn-close-bg) ;
-    border-radius: 50%;
-    box-shadow: 0px 0px 3px 3px var(--btn-close-bg);
-    transition: all 0.3s;
+.btn-close {
+  background-color: var(--btn-close-bg);
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 3px var(--btn-close-bg);
+  transition: all 0.3s;
 }
-.btn-close:hover{
-    transform: scale(1.2);
-    transition: all 0.3s;
-
+.btn-close:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
 }
