@@ -28,7 +28,7 @@ async function merging(e, l, mid, r) {
       if (n1 + n2 === e.length) {
         e[k].style.background = 'var(--bars-sorted-color)';
       } else {
-        e[k].style.background = 'lightgreen';
+        e[k].style.background = 'rgb(255, 85, 122)';
       }
       e[k].style.height = left[i];
       i++;
@@ -37,7 +37,7 @@ async function merging(e, l, mid, r) {
       if (n1 + n2 === e.length) {
         e[k].style.background = 'var(--bars-sorted-color)';
       } else {
-        e[k].style.background = 'lightgreen';
+        e[k].style.background = 'rgb(255, 85, 122)';
       }
       e[k].style.height = right[j];
       j++;
@@ -49,7 +49,7 @@ async function merging(e, l, mid, r) {
     if (n1 + n2 === e.length) {
       e[k].style.background = 'var(--bars-sorted-color)';
     } else {
-      e[k].style.background = 'lightgreen';
+      e[k].style.background = 'rgb(255, 85, 122)';
     }
     e[k].style.height = left[i];
     i++;
@@ -59,7 +59,7 @@ async function merging(e, l, mid, r) {
     if (n1 + n2 === e.length) {
       e[k].style.background = 'var(--bars-sorted-color)';
     } else {
-      e[k].style.background = 'lightgreen';
+      e[k].style.background = 'rgb(255, 85, 122)';
     }
     e[k].style.height = right[j];
     j++;

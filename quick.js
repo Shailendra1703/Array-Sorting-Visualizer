@@ -1,7 +1,7 @@
 async function partion(e,l,r){
     let i = l-1;
     //pivot
-    e[r].style.background = ' --bars-sorting-red-color';
+    e[r].style.background = ' var(--bars-sorting-red-color)';
     for(let j = l ; j<=r-1;j++)
     {
         e[j].style.background = 'yellow';
@@ -17,14 +17,14 @@ async function partion(e,l,r){
             await waitForMe(delay);
         }
         else{
-            e[j].style.background ='--bars-sorting-blue-color';
+            e[j].style.background ='var(--bars-sorting-blue-color)';
         }
     }
     i++;
 
     await waitForMe(delay);
     swap(e[i],e[r]);
-    e[r].style.background = '--bars-sorting-blue-color';
+    e[r].style.background = 'var(--bars-sorting-blue-color)';
     e[i].style.background = 'var(--bars-sorted-color)';
 
     await waitForMe(delay);

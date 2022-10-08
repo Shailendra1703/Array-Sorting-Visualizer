@@ -4,11 +4,11 @@ async function insertion() {
   for (let i = 1; i < e.length; i++) {
     let j = i - 1;
     let x = e[i].style.height;
-    e[i].style.background = "--bars-sorting-blue-color";
+    e[i].style.background = "var(--bars-sorting-blue-color)";
     await waitForMe(delay);
 
     while (j > -1 && parseInt(e[j].style.height) > parseInt(x)) {
-      e[j].style.background = "--bars-sorting-blue-color";
+      e[j].style.background = "var(--bars-sorting-blue-color)";
       e[j + 1].style.height = e[j].style.height;
       j--;
 
