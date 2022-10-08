@@ -1,7 +1,7 @@
 async function partion(e,l,r){
     let i = l-1;
     //pivot
-    e[r].style.background = 'red';
+    e[r].style.background = ' --bars-sorting-red-color';
     for(let j = l ; j<=r-1;j++)
     {
         e[j].style.background = 'yellow';
@@ -17,21 +17,21 @@ async function partion(e,l,r){
             await waitForMe(delay);
         }
         else{
-            e[j].style.background ='blue';
+            e[j].style.background ='--bars-sorting-blue-color';
         }
     }
     i++;
 
     await waitForMe(delay);
     swap(e[i],e[r]);
-    e[r].style.background = 'blue';
-    e[i].style.background = 'green';
+    e[r].style.background = '--bars-sorting-blue-color';
+    e[i].style.background = 'var(--bars-sorted-color)';
 
     await waitForMe(delay);
 
     // for(let k = 0 ; k<e.length;k++){
     //     if(e[k].style.background!='green');
-    //        e[k].style.background = 'cyan';
+    //        e[k].style.background = 'var(--bars-color)';
     // }
 
     return i;   //returning pivot position;
@@ -46,8 +46,8 @@ async function quicksort(e,l,r){
     }
     else{
         if(l>=0 && r>=0 && l <e.length && r<e.length){
-            e[r].style.background = 'green';
-            e[l].style.background = 'green';
+            e[r].style.background = 'var(--bars-sorted-color)';
+            e[l].style.background = 'var(--bars-sorted-color)';
         }
     }
 }

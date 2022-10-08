@@ -26,7 +26,7 @@ async function merging(e, l, mid, r) {
 
     if (parseInt(left[i]) <= parseInt(right[j])) {
       if (n1 + n2 === e.length) {
-        e[k].style.background = 'green';
+        e[k].style.background = 'var(--bars-sorted-color)';
       } else {
         e[k].style.background = 'lightgreen';
       }
@@ -35,7 +35,7 @@ async function merging(e, l, mid, r) {
       k++;
     } else {
       if (n1 + n2 === e.length) {
-        e[k].style.background = 'green';
+        e[k].style.background = 'var(--bars-sorted-color)';
       } else {
         e[k].style.background = 'lightgreen';
       }
@@ -47,7 +47,7 @@ async function merging(e, l, mid, r) {
 
   while (i < n1) {
     if (n1 + n2 === e.length) {
-      e[k].style.background = 'green';
+      e[k].style.background = 'var(--bars-sorted-color)';
     } else {
       e[k].style.background = 'lightgreen';
     }
@@ -57,7 +57,7 @@ async function merging(e, l, mid, r) {
   }
   while (j < n2) {
     if (n1 + n2 === e.length) {
-      e[k].style.background = 'green';
+      e[k].style.background = 'var(--bars-sorted-color)';
     } else {
       e[k].style.background = 'lightgreen';
     }

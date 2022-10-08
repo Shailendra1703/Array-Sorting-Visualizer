@@ -5,6 +5,9 @@ html {
   --color-text: #333333;
   --toggle-btn: #231f20;
   --bars-color: #41CFFF;
+  --bars-sorted-color:green;
+  --bars-sorting-blue-color:rgb(3, 3, 255);
+  --bars-sorting-red-color:red;
   --btn-primary-bg: rgb(238, 237, 237);
   --btn-primary-bg-hover: #a39fa0;
   --btn-close-bg:  rgb(232, 231, 231);
@@ -18,6 +21,9 @@ html[data-theme='dark'] {
   --color-text: #fffbfb;
   --toggle-btn: #b5b5b5;
   --bars-color: #4DFFDB;
+  --bars-sorted-color:rgb(0, 255, 0);
+  --bars-sorting-blue-color:rgb(62, 62, 255);
+  --bars-sorting-red-color:rgb(251, 78, 78);
   --btn-primary-bg: rgb(148, 146, 146);
   --btn-primary-bg-hover: #e4e3e3;
   --btn-close-bg:rgb(238, 228, 228);

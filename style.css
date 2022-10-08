@@ -11,12 +11,7 @@ html{
     height:500px;
     justify-content:center;
 }
-/* .flex-item{
-    background:cyan;
-    border:1pt solid black;
-    width:10px;
-    transition:0.1s all ease;
-} */
+
 .input
 {
     display:flex;
