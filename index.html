@@ -13,6 +13,14 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="togglebtn.css" />
+
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
   </head>
 
 <!--modal section-->
@@ -34,33 +42,39 @@
 </div>
 <!--Header section-->
 
-<nav class="navbar bg-dark fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand text-light" href="#">Sorting Visualizer</a>
-    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+<nav class="navbar fixed-top">
+  <div class="container-fluid ">
+    <a  href="#"> <h2>Sorting Visualizer</h2> </a>
+    <div class="two-components">
+      <div class="toggle-container">
+        <input id="switch" type="checkbox" name="theme">
+        <label class="toggleLabel" for="switch"></label>
+      </div>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sorting Options</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-              <button type="button" id="newArray" class="mg-lg-3 btn btn-outline-success btn-dark newArray">Array Generator</button>
+              <button type="button" id="newArray" class="mg-lg-3 btn btn-outline-success newArray">Array Generator</button>
           </li>
           <div class="p-lg-3 input">
             <span id="size" class="m-lg-2" ><span class="p-lg-2">Size</span><input  id="arr_sz" type="range" min="5" max="100" step=1  value=60></span>
             <span id="speed" class="m-lg-2" ><span class="p-lg-2">Speed</span><input  id="speed_input" type="range" min="20" max="500" stepDown=10  value=60></span>
          </div>
-         <div class="d-grid gap-3">
-          <button type="button"  class="btn btn-outline-primary btn-dark bubbleSort" data-bs-dismiss="offcanvas">Bubble Sort</button>
-          <button type="button"  class="btn btn-outline-primary btn-dark selectionSort" data-bs-dismiss="offcanvas">Selection Sort</button>
-          <button type="button"  class="btn btn-outline-primary btn-dark insertionSort" data-bs-dismiss="offcanvas">Insertion Sort</button>
-          <button type="button"  class="btn btn-outline-primary btn-dark mergeSort" data-bs-dismiss="offcanvas">Merge Sort</button>
-          <button type="button"  class="btn btn-outline-primary btn-dark quickSort" data-bs-dismiss="offcanvas">Quick Sort</button>
-          <button type="button"  class="btn btn-outline-primary btn-dark performance"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-dismiss="offcanvas">Pefromance</button>
+         <div class="d-grid gap-3 diff-sorts">
+          <button type="button"  class="btn bubbleSort" data-bs-dismiss="offcanvas">Bubble Sort</button>
+          <button type="button"  class="btn selectionSort" data-bs-dismiss="offcanvas">Selection Sort</button>
+          <button type="button"  class="btn insertionSort" data-bs-dismiss="offcanvas">Insertion Sort</button>
+          <button type="button"  class="btn mergeSort" data-bs-dismiss="offcanvas">Merge Sort</button>
+          <button type="button"  class="btn quickSort" data-bs-dismiss="offcanvas">Quick Sort</button>
+          <button type="button"  class="btn performance"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-dismiss="offcanvas">Pefromance</button>
           </div>
         </ul>
 
@@ -69,9 +83,10 @@
   </div>
 </nav>
   
-  <body class="p-2 mb-2 bg-dark text-white">
+  <body class="p-2 mb-2">
       <div id="bars" class="flex-container"></div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      <script src="togglebtn.js"></script>
       <script src="sort.js"></script>
       <script src="bubble.js"></script>
       <script src="selection.js"></script>

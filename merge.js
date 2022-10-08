@@ -6,13 +6,13 @@ async function merging(e, l, mid, r) {
 
   for (let i = 0; i < n1; i++) {
     await waitForMe(delay);
-    e[i + l].style.background = "orange";
+    e[i + l].style.background = 'orange';
     left[i] = e[l + i].style.height;
   }
 
   for (let i = 0; i < n2; i++) {
     await waitForMe(delay);
-    e[i + mid + 1].style.background = "yellow";
+    e[i + mid + 1].style.background = 'yellow';
     right[i] = e[mid + 1 + i].style.height;
   }
 
@@ -25,19 +25,19 @@ async function merging(e, l, mid, r) {
     await waitForMe(delay);
 
     if (parseInt(left[i]) <= parseInt(right[j])) {
-      if ((n1 + n2) === e.length) {
-        e[k].style.background = "green";
+      if (n1 + n2 === e.length) {
+        e[k].style.background = 'green';
       } else {
-        e[k].style.background = "lightgreen";
+        e[k].style.background = 'lightgreen';
       }
       e[k].style.height = left[i];
       i++;
       k++;
     } else {
-      if ((n1 + n2) === e.length) {
-        e[k].style.background = "green";
+      if (n1 + n2 === e.length) {
+        e[k].style.background = 'green';
       } else {
-        e[k].style.background = "lightgreen";
+        e[k].style.background = 'lightgreen';
       }
       e[k].style.height = right[j];
       j++;
@@ -46,20 +46,20 @@ async function merging(e, l, mid, r) {
   }
 
   while (i < n1) {
-    if ((n1 + n2) === e.length) {
-      e[k].style.background = "green";
+    if (n1 + n2 === e.length) {
+      e[k].style.background = 'green';
     } else {
-      e[k].style.background = "lightgreen";
+      e[k].style.background = 'lightgreen';
     }
     e[k].style.height = left[i];
     i++;
     k++;
   }
   while (j < n2) {
-    if ((n1 + n2) === e.length) {
-      e[k].style.background = "green";
-    } else { 
-      e[k].style.background = "lightgreen";
+    if (n1 + n2 === e.length) {
+      e[k].style.background = 'green';
+    } else {
+      e[k].style.background = 'lightgreen';
     }
     e[k].style.height = right[j];
     j++;
@@ -67,42 +67,45 @@ async function merging(e, l, mid, r) {
   }
 }
 
-async function mergeSort(e,l,r){
-    if(l<r)
-    {
-        const m = l+Math.floor((r-l)/2);
-        await mergeSort(e,l,m);
-        await mergeSort(e,m+1,r);
-        await merging(e,l,m,r);
-    }
-    else
-    {
-        return;
-    }
+async function mergeSort(e, l, r) {
+  if (l < r) {
+    const m = l + Math.floor((r - l) / 2);
+    await mergeSort(e, l, m);
+    await mergeSort(e, m + 1, r);
+    await merging(e, l, m, r);
+  } else {
+    return;
+  }
 }
 
-const mergeBtn = document.querySelector(".mergeSort");
+const mergeBtn = document.querySelector('.mergeSort');
 
-mergeBtn.addEventListener("click",async function()
-{
-    let e = document.querySelectorAll('.bar');
-    let l = 0;
-    let r = e.length-1;
+mergeBtn.addEventListener('click', async function () {
+  let e = document.querySelectorAll('.bar');
+  let l = 0;
+  let r = e.length - 1;
 
-    disableSortBtn();
-    disableSizeSlider();
-    disableNewArrayBtn();
-    diablePerformanceBtn()
-    const startTime = performance.now();
-    await mergeSort(e,l,r);
-    const endTime = performance.now();
-    console.log(`Call to doSomething took ${endTime - startTime} milliseconds.`);
-    var text = document.getElementById("content");
-    const p = document.querySelectorAll(".bar");
-    var time = (endTime - startTime)/1000;
-    text.textContent = "Array Consist of "+ p.length+" elements and got sorted in "+time.toPrecision(2)+" seconds with a Speed Delay of " + delay+" miliseconds.";
-    enableSortBtn();
-    enablePerformanceBtn();
-    enableNewArrayBtn();
-    enableSizeSlider();
+  disableSortBtn();
+  disableSizeSlider();
+  disableNewArrayBtn();
+  diablePerformanceBtn();
+  const startTime = performance.now();
+  await mergeSort(e, l, r);
+  const endTime = performance.now();
+  console.log(`Call to doSomething took ${endTime - startTime} milliseconds.`);
+  var text = document.getElementById('content');
+  const p = document.querySelectorAll('.bar');
+  var time = (endTime - startTime) / 1000;
+  text.textContent =
+    'Array Consist of ' +
+    p.length +
+    ' elements and got sorted in ' +
+    time.toPrecision(2) +
+    ' seconds with a Speed Delay of ' +
+    delay +
+    ' miliseconds.';
+  enableSortBtn();
+  enablePerformanceBtn();
+  enableNewArrayBtn();
+  enableSizeSlider();
 });

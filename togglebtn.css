@@ -1,0 +1,135 @@
+html {
+  --bg: #fcfcfc;
+  --bg-panel: #ebebeb;
+  --color-headings: #333333;
+  --color-text: #333333;
+  --toggle-btn: #231f20;
+  --bars-color: #41CFFF;
+  --btn-primary-bg: rgb(238, 237, 237);
+  --btn-primary-bg-hover: #a39fa0;
+  --btn-close-bg:  rgb(232, 231, 231);
+
+}
+
+html[data-theme='dark'] {
+  --bg: #333333;
+  --bg-panel: #434343;
+  --color-headings: #fcfcfc;
+  --color-text: #fffbfb;
+  --toggle-btn: #b5b5b5;
+  --bars-color: #4DFFDB;
+  --btn-primary-bg: rgb(148, 146, 146);
+  --btn-primary-bg-hover: #e4e3e3;
+  --btn-close-bg:rgb(238, 228, 228);
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div a {
+  color: var(--color-headings);
+  text-decoration: none;
+}
+div h2 {
+    font-weight: 700;
+}
+.two-components {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+}
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.toggleLabel {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+.toggleLabel:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + .toggleLabel {
+  background: var(--toggle-btn);
+}
+
+input:checked + .toggleLabel:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.toggleLabel:active:after {
+  width: 45px;
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+/*  the bars */
+.flex-item{
+    background:var(--bars-color);
+    border:1pt solid black;
+    width:10px;
+    transition:0.1s all ease;
+}
+
+/* the menu modal  */
+.offcanvas{
+    background-color: var(--bg);
+}
+.offcanvas h5{
+    color: var(--color-headings);
+}
+.offcanvas span{
+    color: var(--color-text);
+}
+.diff-sorts button{
+background-color: var(--btn-primary-bg);
+color: var(--color-text);
+}
+.diff-sorts button:hover{
+    background-color:   var(--btn-primary-bg);
+    box-shadow: 0px 0px 10px 3px var(--btn-primary-bg-hover);
+    border: none;
+    color: var(--color-text);
+
+}
+.btn-close{
+    background-color:var(--btn-close-bg) ;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px 3px var(--btn-close-bg);
+    transition: all 0.3s;
+}
+.btn-close:hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
+
+}
