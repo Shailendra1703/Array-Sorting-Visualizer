@@ -41,40 +41,46 @@ An Array-Sorting visualizer using JavaScript which gives a visual representation
     </tr>
         <tr>
         <td width="50%">
+                <h3 align="center">Insertion Sort</h3>
+        <p justify="center">
+            This algorithm splits the array into sorted and unsorted parts, picking elements from the unsorted portion and placing them in the correct position of the sorted portion.
+        </p>
             <br />
                 <img src="img/insertionSort-gif.gif" width="100%" alt="Insertion Sort"/>
             <br />
         </td>
         <td width="50%">
-        <h3 align="center">Insertion Sort</h3>
+                <h3 align="center">Merge Sort</h3>
         <p justify="center">
-            This algorithm splits the array into sorted and unsorted parts, picking elements from the unsorted portion and placing them in the correct position of the sorted portion.
+         This algorithm recursively splits the array in half until it cannot be further divided. It will then begin merging from the smallest units based on the comparison of the two, and continue until you have a final sorted array.
         </p>
-        </td>
-    </tr>
-        <tr>
-        <td width="50%">
             <br />
                 <img src="img/mergeSort-gif.gif" width="100%" alt="Merge Sort"/>
             <br />
         </td>
-        <td width="50%">
-        <h3 align="center">Merge Sort</h3>
-        <p justify="center">
-         This algorithm recursively splits the array in half until it cannot be further divided. It will then begin merging from the smallest units based on the comparison of the two, and continue until you have a final sorted array.
-        </p>
-        </td>
     </tr>
         <tr>
         <td width="50%">
+                <h3 align="center">Quick Sort</h3>
+        <p justify="center">
+            This algorithm picks a pivot element and partitions the array around the pivot. The partition will put all array elements greater than the pivot to the right, and lesser than to the left. This is called recursively to produce the sorted array.
+        </p>
             <br />
                 <img src="img/quickSort-gif.gif" width="100%" alt="Quick Sort"/>
             <br />
         </td>
-        <td width="50%">
-        <h3 align="center">Quick Sort</h3>
+        <td width="50%" valign="top">
+        <h3 align="center">Performance</h3>
         <p justify="center">
-            This algorithm picks a pivot element and partitions the array around the pivot. The partition will put all array elements greater than the pivot to the right, and lesser than to the left. This is called recursively to produce the sorted array.
+            When choosing a sorting algorithm, you must consider the limitations and requirements. 
+            </br>
+            Establishing key factors such as the size of your dataset and how much memory is available to run the sort will help you determine which sort is best for you.
+            </br>
+            </br>
+            Algorithms such as Bubble sort are slow, and not suitable for large collections, whilst Merge sort is resource intensive.
+            </br>
+            </br>
+            Check out the performance of each sort in the visualiser to help you decide.
         </p>
         </td>
     </tr>
