@@ -2,19 +2,19 @@ async function bubble() {
   const e = document.querySelectorAll(".bar");
   for (let i = 0; i < e.length - 1; i++) {
     for (let j = 0; j < e.length - i - 1; j++) {
-      e[j].style.background = "blue";
-      e[j + 1].style.background = "red";
+      e[j].style.background = "var(--bars-sorting-blue-color)";
+      e[j + 1].style.background = " var(--bars-sorting-red-color)";
 
       if (parseInt(e[j].style.height) > parseInt(e[j + 1].style.height)) {
         await waitForMe(delay);
         swap(e[j], e[j + 1]);
       }
-      e[j].style.background = "cyan";
-      e[j + 1].style.background = "cyan";
+      e[j].style.background = "var(--bars-color)";
+      e[j + 1].style.background = "var(--bars-color)";
     }
-    e[e.length - 1 - i].style.background = "green";
+    e[e.length - 1 - i].style.background = "var(--bars-sorted-color)";
   }
-  e[0].style.background = "green";
+  e[0].style.background = "var(--bars-sorted-color)";
 }
 
 const bubBtn = document.querySelector(".bubbleSort");
