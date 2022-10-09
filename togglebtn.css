@@ -1,15 +1,17 @@
 html {
-  --bg: #333333;
+  --bg: #212529;
   --bg-panel: #434343;
   --color-headings: #fcfcfc;
   --color-text: #fffbfb;
   --toggle-btn: #b5b5b5;
-  --bars-color: #4dffdb;
+  --bars-color: cyan;
   --bars-sorted-color: rgb(0, 255, 0);
   --bars-sorting-blue-color: rgb(62, 62, 255);
   --bars-sorting-red-color: rgb(251, 78, 78);
-  --btn-primary-bg: rgb(148, 146, 146);
-  --btn-primary-bg-hover: #e4e3e3;
+  --btn-primary-bg: #212529;
+  --btn-primary-border: #0d6efd;
+  --btn-primary-txt-color: #0d6efd;
+  --btn-primary-bg-hover: #0d6efd;
   --btn-close-bg: rgb(238, 228, 228);
 }
 
@@ -24,6 +26,8 @@ html[data-theme='light'] {
   --bars-sorting-blue-color: rgb(3, 3, 255);
   --bars-sorting-red-color: red;
   --btn-primary-bg: rgb(238, 237, 237);
+  --btn-primary-border: none;
+  --btn-primary-txt-color: #333333;
   --btn-primary-bg-hover: #a39fa0;
   --btn-close-bg: rgb(232, 231, 231);
 }
@@ -119,11 +123,11 @@ html.transition *:after {
 }
 .diff-sorts button {
   background-color: var(--btn-primary-bg);
-  color: var(--color-text);
+  color: var(--btn-primary-txt-color);
+  border: 1px solid var(--btn-primary-border);
 }
 .diff-sorts button:hover {
-  background-color: var(--btn-primary-bg);
-  box-shadow: 0px 0px 10px 3px var(--btn-primary-bg-hover);
+  background-color: var(--btn-primary-bg-hover);
   border: none;
   color: var(--color-text);
 }
