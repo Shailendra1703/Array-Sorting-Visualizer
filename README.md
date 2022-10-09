@@ -2,12 +2,10 @@
 <h3 align="center">⭐ Make sure to give this repository a star! ⭐</h3>
 
 ## ❓ About
+
 An Array-Sorting visualizer using JavaScript which gives a visual representation of how different sorting techniques work.
 
-
 ## 🔗 Live site: [Array Sorting Visualiser](https://shailendra1703.github.io/Array-Sorting-Visualizer/)
-
-
 
 ## ✅ How to Contribute?
 
@@ -23,28 +21,22 @@ An Array-Sorting visualizer using JavaScript which gives a visual representation
 <table bordercolor="#66b2b2">
     <tr>
         <td width="50%">
+        <h3 align="center">Bubble Sort</h3>
+        <p justify="center">
+            This algorithm will iterate over the array and repeatedly compare adjacent elements, swapping them if they are not in the correct order.
+        </p>
             <br />
                 <img src="img/bubbleSort-gif.gif" width="100%" alt="Bubble Sort"/>
             <br />
         </td>
         <td width="50%">
-        <h3 align="center">Bubble Sort</h3>
-        <p justify="center">
-            This algorithm will iterate over the array and repeatedly compare adjacent elements, swapping them if they are not in the correct order.
-        </p>
-        </td>
-    </tr>
-    <tr>
-        <td width="50%">
-            <br />
-                <img src="img/selectionSort-gif.gif" width="100%" alt="Selection Sort"/>
-            <br />
-        </td>
-        <td width="50%"">
-        <h3 align="center">Selection Sort</h3>
+                <h3 align="center">Selection Sort</h3>
         <p justify="center">
             This algorithm will iterate over the array, finding the minimum element from the unsorted portion, and swap it in place with the first element of unsorted portion.
         </p>
+            <br />
+                <img src="img/selectionSort-gif.gif" width="100%" alt="Selection Sort"/>
+            <br />
         </td>
     </tr>
         <tr>
