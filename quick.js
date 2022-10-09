@@ -6,7 +6,9 @@ async function partion(e,l,r){
     {
         e[j].style.background = 'yellow';
         await waitForMe(delay);
-
+        if(paused==1){
+            await pauser()
+          }
         if(parseInt(e[j].style.height) < parseInt(e[r].style.height)){
             i++;
             swap(e[i],e[j]);

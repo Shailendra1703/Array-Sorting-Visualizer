@@ -5,6 +5,9 @@ async function selection() {
     let k = i;
     e[i].style.background = "blue";
     for (let j = i + 1; j < e.length; j++) {
+      if(paused==1){
+        await pauser()
+      }
       e[j].style.background = "yellow";
       await waitForMe(delay);
       if (parseInt(e[j].style.height) < parseInt(e[k].style.height)) {

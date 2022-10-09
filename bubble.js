@@ -2,6 +2,9 @@ async function bubble() {
   const e = document.querySelectorAll(".bar");
   for (let i = 0; i < e.length - 1; i++) {
     for (let j = 0; j < e.length - i - 1; j++) {
+      if(paused==1){
+        await pauser()
+      }
       e[j].style.background = "blue";
       e[j + 1].style.background = "red";
 

@@ -20,7 +20,7 @@
   <div class="modal-dialog ">
     <div class="modal-content text-dark">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Performace of Your Sort</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Performance of Your Sort</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body" id="content">
@@ -60,7 +60,7 @@
           <button type="button"  class="btn btn-outline-primary btn-dark insertionSort" data-bs-dismiss="offcanvas">Insertion Sort</button>
           <button type="button"  class="btn btn-outline-primary btn-dark mergeSort" data-bs-dismiss="offcanvas">Merge Sort</button>
           <button type="button"  class="btn btn-outline-primary btn-dark quickSort" data-bs-dismiss="offcanvas">Quick Sort</button>
-          <button type="button"  class="btn btn-outline-primary btn-dark performance"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-dismiss="offcanvas">Pefromance</button>
+          <button type="button"  class="btn btn-outline-primary btn-dark performance"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-dismiss="offcanvas">Performance</button>
           </div>
         </ul>
 
@@ -68,7 +68,10 @@
     </div>
   </div>
 </nav>
-  
+<div class="mt-5 fixed-top float-left  end-0 d-flex justify-content-center align-items-center">
+  <button id="pause" class="btn btn-outline-primary btn-dark" name="pause">Pause</button>
+  <label class="toggleLabel" for="switch"></label>
+</div>
   <body class="p-2 mb-2 bg-dark text-white">
       <div id="bars" class="flex-container"></div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
@@ -78,5 +81,5 @@
       <script src="insertion.js"></script>
       <script src="quick.js"></script>
       <script src="merge.js"></script>
-  </body>
+  </body> 
 </html>

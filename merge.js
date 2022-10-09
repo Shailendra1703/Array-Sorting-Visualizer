@@ -6,12 +6,18 @@ async function merging(e, l, mid, r) {
 
   for (let i = 0; i < n1; i++) {
     await waitForMe(delay);
+    if(paused==1){
+      await pauser()
+    }
     e[i + l].style.background = "orange";
     left[i] = e[l + i].style.height;
   }
 
   for (let i = 0; i < n2; i++) {
     await waitForMe(delay);
+    if(paused==1){
+      await pauser()
+    }
     e[i + mid + 1].style.background = "yellow";
     right[i] = e[mid + 1 + i].style.height;
   }
@@ -23,7 +29,9 @@ async function merging(e, l, mid, r) {
 
   while (i < n1 && j < n2) {
     await waitForMe(delay);
-
+    if(paused==1){
+      await pauser()
+    }
     if (parseInt(left[i]) <= parseInt(right[j])) {
       if ((n1 + n2) === e.length) {
         e[k].style.background = "green";
@@ -46,6 +54,9 @@ async function merging(e, l, mid, r) {
   }
 
   while (i < n1) {
+    if(paused==1){
+      await pauser()
+    }
     if ((n1 + n2) === e.length) {
       e[k].style.background = "green";
     } else {
@@ -56,6 +67,9 @@ async function merging(e, l, mid, r) {
     k++;
   }
   while (j < n2) {
+    if(paused==1){
+      await pauser()
+    }
     if ((n1 + n2) === e.length) {
       e[k].style.background = "green";
     } else { 

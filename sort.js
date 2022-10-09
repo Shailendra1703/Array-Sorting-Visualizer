@@ -1,3 +1,31 @@
+paused=0;
+document.getElementById("pause").addEventListener("click",(e)=>{
+  paused=1;
+  document.getElementById("pause").textContent="Resume"
+})
+
+function pauser() {
+  return new Promise(resolve => {
+      let pauseclick = function () {
+          paused= 0;
+          document.getElementById("pause").textContent="Pause"  
+          // Remove the event from play button
+          // after clicking play button 
+          document.getElementById("pause")
+              .removeEventListener("click", pauseclick);
+          
+          resolve("resolved");
+      }
+
+      // Here is the event listener for play
+      // button (instead of setTimeout) which
+      // will wait for the element to get click
+      // to get resolved until then it will be
+      // remain stucked inside Promise 
+      document.getElementById("pause")
+          .addEventListener("click", pauseclick)
+  })
+}
 function swap(i, j) {
   let temp = i.style.height;
   i.style.height = j.style.height;
