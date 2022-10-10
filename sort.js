@@ -1,4 +1,5 @@
 paused=0;
+let checkClass;
 document.getElementById("pause").addEventListener("click",(e)=>{
   paused=1;
   document.getElementById("pause").textContent="Resume"
@@ -25,6 +26,16 @@ function pauser() {
       document.getElementById("pause")
           .addEventListener("click", pauseclick)
   })
+}
+document.querySelector(".navbar-toggler").addEventListener("click",(e)=>{
+  document.getElementById("pause").style.display="none";
+  checkClass=window.setInterval(checkClassList,100)
+});
+function checkClassList(){
+  if(document.getElementById("offcanvasNavbar").classList.contains("hiding")){
+    document.getElementById("pause").style.display="block"
+    window.clearInterval(checkClass)
+  }
 }
 function swap(i, j) {
   let temp = i.style.height;
