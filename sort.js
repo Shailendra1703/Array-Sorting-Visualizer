@@ -112,3 +112,13 @@ newArray.addEventListener("click", function () {
   clear();
   createNewArray(arraySize.value);
 });
+
+let title = document.querySelector('#title')
+
+document.querySelectorAll('.btn').forEach(button => {
+  button.addEventListener('click', () => {
+    if (button.textContent.includes('Sort')) {
+      title.textContent = button.textContent
+    }
+  })
+}) 
