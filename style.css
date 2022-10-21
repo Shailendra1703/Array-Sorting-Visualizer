@@ -2,6 +2,16 @@ html{
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title {
+    color: #fff;
+}
+
 .flex-container
 {
     margin-top:100px;
